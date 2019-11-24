@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.*;
+
+class Rextester
+{  
+    public static void main(String args[])
+    {
+        Integer d = 13;
+        Integer tmpData = d;
+        StringBuilder result = new StringBuilder();       
+
+        while(tmpData != 0){ 
+            Integer resBin = tmpData%2;
+            Integer restProc = resBin == 1 ? (tmpData-1)/2 : tmpData/2;
+            tmpData = restProc;
+            result.append(resBin);
+        }
+
+        
+        System.out.println(result);
+    }
+}
